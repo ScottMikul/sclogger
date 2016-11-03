@@ -1,0 +1,6 @@
+1) Create a view that shows all of the blog posts.
+2) Create a view that allows for users to update or add blog posts.
+3) Connect to a webserver and test some basic rest services.
+4) Send back some data that makes the views update appropriately
+5) configure a database and create the services to create, read, update and delete the blog posts.
+6) onwindowload make an http read service call to pull the post data, then update the view.
