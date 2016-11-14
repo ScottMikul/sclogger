@@ -1,0 +1,31 @@
+<html ng-app="BloggApp" >
+<head>
+    <title>Angularjs repeat directive test</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+    <script src="js/postData.js"></script>
+    <script src="js/postDirective.js"></script>
+    <script src="js/postEditDirective.js"></script>
+    <script src="js/postUpdateDeleteDirective.js"></script>
+    <script src="js/postAddDirective.js"></script>
+</head>
+<body>
+<div ng-controller="Controller">
+    <div ng-controller="updateentry">
+        <div ng-controller="deletepostctr">
+            <div ng-repeat="post in posts" ng-init="post.edit=false">
+                <div ng-if="post.edit">
+                    <div posteditdir ng-init="post.postdata={content:post.content,title:post.title,date:post.date}"></div>
+                </div>
+                <div ng-if="!post.edit">
+                    <div postupdatedeletedir></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div ng-controller="addpost">
+        <div postadddir></div>
+    </div>
+</div>
+</body>
+</html>

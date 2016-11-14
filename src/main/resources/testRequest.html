@@ -1,0 +1,25 @@
+<html ng-app="BloggApp" >
+<head>
+    <title>Angularjs repeat directive test</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+    <script>
+		angular.module('BloggApp', [])
+		.controller('Controller',['$scope','$http', function($scope, $http){
+			$scope.jsonRequest = "";
+			$scope.update = function(data){
+                $scope.jsonRequest = {name:"hellothere"};
+				$http.get('http://localhost:4567/printrequest', $scope.jsonRequest).then(function(data){$scope.updateData = data;});
+			};
+
+		}]);
+	</script>
+</head>
+<body>
+<div ng-controller="Controller">
+    <div ng-init="Blobberson = 'lol'">
+        <button ng-click="update()">Update</button>
+        {{updateData}}
+    </div>
+</div>
+</body>
+</html>

@@ -14,9 +14,11 @@ dependencies {
     compile "com.sparkjava:spark-core:2.5"
 
     //gson
-
+    compile group: 'com.google.code.gson', name: 'gson', version: '1.7.2'
 
     //mongodb
+    compile 'org.mongodb:mongodb-driver:3.3.0'
 
+    //junit
     testCompile group: 'junit', name: 'junit', version: '4.11'
 }
